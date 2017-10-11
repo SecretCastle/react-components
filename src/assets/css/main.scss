@@ -122,6 +122,7 @@ video {
         transform: translateY(100%);
         z-index: 100;
         max-height: 450px;
+        overflow: scroll;
         .selector_wrap_item {
             //这里假设微信浏览器都支持css3
             position: relative;
@@ -145,12 +146,19 @@ video {
 .multiselector_wrap.isShow {
     position: fixed;
     top: 0;
+    left: 0;
     .shadow_wrap {
         opacity: 1;
         display: block;
     }
     .selector_wrap {
         transform: translateY(0);
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+.multiselector_wrap.isHide {
+    .selector_wrap {
         transition: transform 300ms ease-in-out;
     }
 }

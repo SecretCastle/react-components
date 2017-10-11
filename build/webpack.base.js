@@ -16,38 +16,47 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.jsx$/,
-            loaders: ["babel-loader", "eslint-loader"],
-            exclude: /node_modules/
-        }, {
-            test: /\.scss$/,
-            use: [{
-                loader: "style-loader"
-            }, {
-                loader: "css-loader",
-                options: {
-                    sourceMap: true
-                }
-            }, {
-                loader: "sass-loader",
-                options: {
-                    sourceMap: true,
-                    includePaths: ["node_modules"]
-                }
-            }]
-        }, {
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-        }, {
-            enforce: 'pre',
-            test: /\.jsx$/,
-            exclude: /node_modules/,
-            use: [{
-                loader: 'eslint-loader',
-                query: {
-                    configFile: './.eslintrc'
-                },
-            }],
-        }]
+                test: /\.jsx$/,
+                loaders: ["babel-loader", "eslint-loader"],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.jsx$/,
+                loaders: ["babel-loader", "eslint-loader"],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true,
+                        includePaths: ["node_modules"]
+                    }
+                }]
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                enforce: 'pre',
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'eslint-loader',
+                    query: {
+                        configFile: './.eslintrc'
+                    },
+                }],
+            }
+        ]
     }
 }

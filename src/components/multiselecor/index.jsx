@@ -4,9 +4,9 @@ import { findDOMNode } from 'react-dom';
 
 /**
  * type => 这里可以选择对有，week,month or diy
- *      week: 星期
- *      month: 每一月
- *      diy: diy
+ * week: 星期
+ * month: 每一月
+ * diy: diy
  * 
  */
 let selector = [],
@@ -20,11 +20,11 @@ class MultiSelector extends React.Component {
     this.props.onShowTheMulti({
       isShow:false
     });
-    this.props.selectedFn(selectedArr.sort())
+    this.props.selectedFn(selectedArr.sort());
   } 
 
   select(index,e,value){
-    let el = findDOMNode(e.currentTarget)
+    let el = findDOMNode(e.currentTarget);
     let isNotSeleted = this.hasNotSeleted(el.children[1]);
     if(isNotSeleted){
       el.children[1].classList.remove('notseleted')
@@ -78,8 +78,9 @@ class MultiSelector extends React.Component {
     if(type === 'week'){
       selectedArr = data
     }
+    
     return(
-      <div className={ClassNames('multiselector_wrap',{'isShow':isShow})}>
+      <div className={ClassNames('multiselector_wrap',{'isShow':isShow})} >
         <div className="shadow_wrap" onClick={this.hideMultiSelector}></div>
         <div className="selector_wrap">
           {

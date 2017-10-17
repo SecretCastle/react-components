@@ -24,6 +24,11 @@ class Demo extends React.Component {
     console.log('滑动中的值',e);
   }
 
+
+  onChangeFn = (e) => {
+    console.log(e)
+  }
+
   render(){
     const styles = {
       title:{
@@ -31,6 +36,11 @@ class Demo extends React.Component {
         paddingLeft:'15px'
       }
     }
+
+    const data = [
+      [1,2,3,4,5,6],
+      [7,8,9,10,11,12]
+    ]
     return(
       <div>
         <div>
@@ -62,8 +72,8 @@ class Demo extends React.Component {
           />
         </div>
         <div>
-          <div style={styles.title}>日期选择</div>
-          <DateSelector />
+          <div style={styles.title}>选择器</div>
+          <DateSelector type={'time'} onChange={ e => this.onChangeFn(e)} value={[10,40]} dataset={data}/>
         </div>
       </div>
     )

@@ -102,7 +102,6 @@ class ScrollUl extends React.Component {
 class DateSelector extends React.Component {
     constructor(props){
         super(props)
-        console.log('run')
         this.beforeRun()
     }
 

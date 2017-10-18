@@ -49,7 +49,7 @@ class Demo extends React.Component {
             isShow={this.state.isShow}
             onShowTheMulti={ e => { this.setState({ isShow:e.isShow })}}
             type={'week'}
-            selectedFn = {e=>{this.setState({data:e})}}
+            selectedFn = {e=>{this.setState({data:e}); console.log(this.state.data)}}
             data={this.state.data}
           />
         </div>

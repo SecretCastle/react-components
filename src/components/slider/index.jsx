@@ -72,7 +72,6 @@ class Slider extends React.Component {
 
   setValueFn(value){
     let isTrue = this.beforeSetValue(value);
-    console.log(isTrue)
     if(isTrue){
       let movePercent = (value - this.config.min ) * (this.track_length / Number((this.config.max - this.config.min))) / this.track_length * 100;
       this.setState({
@@ -114,7 +113,7 @@ class Slider extends React.Component {
       this.setValueFn(this.valueIndex)
     }else{
       track_wrap.children[1].setAttribute('data-attr',`${this.config.min}${this.config.unit}`);
-      console.warn('please check your default value',((this.config.default - this.config.min) % this.config.step ))
+      console.warn('please check your default value')
     }
   }
 

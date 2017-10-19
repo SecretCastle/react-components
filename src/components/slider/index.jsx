@@ -3,7 +3,6 @@ import { findDOMNode } from 'react-dom';
 import ClassNames from 'classnames';
 
 const WithPoint = (props) => {
-  console.log('run');
   return (
     <div className="rc_slider_step_icon" style={{left: props.pos + '%' }}></div>
   )
@@ -34,12 +33,18 @@ class Slider extends React.Component {
       return;
     }
     this.isMove = true;
+
+
     //设置滑动的距离
-    this.moveDistance = e.changedTouches[0].clientX - this.tracktoleft;
+    this.moveDistance = e.changedTouches[0].clientX  - this.tracktoleft ;
     let slideStep = Math.round(this.moveDistance / ((this.track_length / (this.config.max - this.config.min)) * Number(this.config.step))) 
     //最终的目的是，获得slideStep，从而渲染滑块
-    this.valueIndex = (slideStep + Number(this.config.min)) * Number(this.config.step);
+    this.valueIndex = slideStep * this.config.step + Number(this.config.min);
+
     this.setValueFn(this.valueIndex);
+
+    console.log(this.valueIndex,this.moveDistance, slideStep)
+
     if(this.props.onSlide){
       this.props.onSlide(this.valueIndex)
     }
@@ -67,8 +72,9 @@ class Slider extends React.Component {
 
   setValueFn(value){
     let isTrue = this.beforeSetValue(value);
+    console.log(isTrue)
     if(isTrue){
-      let movePercent = value * (this.track_length / Number((this.config.max - this.config.min))) / this.track_length * 100;
+      let movePercent = (value - this.config.min ) * (this.track_length / Number((this.config.max - this.config.min))) / this.track_length * 100;
       this.setState({
         move:{
           left: `${movePercent}%`
@@ -103,9 +109,12 @@ class Slider extends React.Component {
     if(this.props.showStep){
       this.createWithPointHtml(track_wrap)
     }
-    track_wrap.children[1].setAttribute('data-attr',`${this.valueIndex}${this.config.unit}`);
-    if(this.valueIndex){
+    if(this.valueIndex && ((this.config.default - this.config.min) % this.config.step  === 0)){
+      track_wrap.children[1].setAttribute('data-attr',`${this.valueIndex}${this.config.unit}`);
       this.setValueFn(this.valueIndex)
+    }else{
+      track_wrap.children[1].setAttribute('data-attr',`${this.config.min}${this.config.unit}`);
+      console.warn('please check your default value',((this.config.default - this.config.min) % this.config.step ))
     }
   }
 

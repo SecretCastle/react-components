@@ -1,8 +1,8 @@
 # react-components
+[page]
 > multiselector_actionsheet
 
 ![](http://oxzz0e76z.bkt.clouddn.com/WX20171018-104117@2x.png)
-
 code
 ```js
 <button value="click me" onClick={this.showMultiSelector}>click me</button>
@@ -22,7 +22,7 @@ selectedFn|选中关闭后返回的数据|Function
 data|默认值|Array
 diyData|当type为’diy'自定义时，传入的数据|Array
 
-
+[page]
 > slider
 
 ![](http://oxzz0e76z.bkt.clouddn.com/WX20171018-110131@2x.png)
@@ -51,7 +51,8 @@ onChange|滑动结束后触发的函数|Function
 onSlide|滑动中触发的函数|Function
 showStep|滑动条是否显示刻度|Boolean
 showTip|滑块上是否显示当前值|Boolean
-
+    
+[page]
 > scroll_selector
 
 ![](http://oxzz0e76z.bkt.clouddn.com/WX20171018-110945@2x.png)
@@ -62,7 +63,12 @@ const data = [
     ['1','2','3'],
     ['4','5','6']
 ]
-<DateSelector type={'time'} onChange={ e => this.onChangeFn(e)} value={[10,40]} dataset={data}/>
+<DateSelector 
+    type={'time'} 
+    onChange={ e => this.onChangeFn(e)} 
+    value={[10,40]} 
+    dataset={data}
+/>
 ```
 
 属性名称|说明|类型

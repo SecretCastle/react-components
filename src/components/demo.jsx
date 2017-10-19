@@ -21,7 +21,7 @@ class Demo extends React.Component {
   }
 
   onSlideFn(e){
-    console.log('滑动中的值',e);
+    //console.log('滑动中的值',e);
   }
 
 
@@ -58,16 +58,16 @@ class Demo extends React.Component {
           <Slider 
             config={
               {
-                max:'50',
-                min:'0',
-                step:'2',
-                default: '10',
+                max:'80',
+                min:'25',
+                step:'5',
+                default: '30',
                 unit:'%'
               }
             }
             onChange={ e => this.onChangeFn(e)}
             onSlide = { e => this.onSlideFn(e)}
-            showStep={false}
+            showStep={true}
             showTip={true}
           />
         </div>

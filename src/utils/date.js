@@ -28,23 +28,6 @@ const DataJS = {
         //later fix
         let year_arr = [];
         for (let i = from; i <= to; i++) {
-            // if (i % 100 !== 0) {
-            //     //当后两位不为 00时
-            //     if (i % 4 !== 0) {
-            //         //平年
-            //         // console.log('平年', i);
-            //     } else {
-            //         // console.log('闰年', i);
-            //     }
-            // } else {
-            //     //当后两位为 00时
-            //     if (i % 400 !== 0) {
-            //         //平年
-            //         // console.log('平年', i);
-            //     } else {
-            //         // console.log('闰年', i);
-            //     }
-            // }
             year_arr.push(i)
         }
         return [year_arr, month]

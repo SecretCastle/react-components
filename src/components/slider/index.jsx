@@ -42,9 +42,6 @@ class Slider extends React.Component {
     this.valueIndex = slideStep * this.config.step + Number(this.config.min);
 
     this.setValueFn(this.valueIndex);
-
-    console.log(this.valueIndex,this.moveDistance, slideStep)
-
     if(this.props.onSlide){
       this.props.onSlide(this.valueIndex)
     }

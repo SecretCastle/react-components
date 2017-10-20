@@ -21,11 +21,11 @@ class Demo extends React.Component {
   }
 
   onSlideFn(e){
-    //console.log('滑动中的值',e);
+    console.log('滑动中的值',e);
   }
 
 
-  onChangeFn = (e) => {
+  onChangeFnDate = (e) => {
     console.log(e)
   }
 
@@ -73,7 +73,7 @@ class Demo extends React.Component {
         </div>
         <div>
           <div style={styles.title}>选择器</div>
-          <DateSelector type={'time'} onChange={ e => this.onChangeFn(e)} value={[10,40]} dataset={data}/>
+          <DateSelector type={'time'} onChange={ e => this.onChangeFnDate(e)} value={[10,40]} dataset={data}/>
         </div>
       </div>
     )

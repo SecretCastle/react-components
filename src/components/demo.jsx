@@ -29,6 +29,10 @@ class Demo extends React.Component {
     console.log(e)
   }
 
+  onClickFn = (e) => {
+    console.log('点击的',e)
+  }
+
   render(){
     const styles = {
       title:{
@@ -59,7 +63,7 @@ class Demo extends React.Component {
             config={
               {
                 max:'80',
-                min:'25',
+                min:'0',
                 step:'5',
                 default: '30',
                 unit:'%'
@@ -67,6 +71,7 @@ class Demo extends React.Component {
             }
             onChange={ e => this.onChangeFn(e)}
             onSlide = { e => this.onSlideFn(e)}
+            onClickChange = { e => this.onClickFn(e)}
             showStep={true}
             showTip={true}
           />

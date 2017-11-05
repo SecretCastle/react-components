@@ -39,6 +39,7 @@ config={
     }
     onChange={ e => this.onChangeFn(e)}
     onSlide = { e => this.onSlideFn(e)}
+    onClickChange = { e => this.onClickFn(e)}
     showStep={false}
     showTip={true}
 />
@@ -47,8 +48,9 @@ config={
 属性名称|说明|类型
 ----|----|----
 config|配置项|Object
-onChange|滑动结束后触发的函数|Function
-onSlide|滑动中触发的函数|Function
+onChange|滑动结束后触发的函数，返回滑动后的值|Function
+onSlide|滑动中触发的函数，返回滑动中的值|Function
+onClickChange|点击触发的函数，返回当前点击的值|Function
 showStep|滑动条是否显示刻度|Boolean
 showTip|滑块上是否显示当前值|Boolean
     

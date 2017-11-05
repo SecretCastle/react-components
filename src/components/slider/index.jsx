@@ -57,6 +57,18 @@ class Slider extends React.Component {
     }
   }
 
+  onClickFn = (e) => {
+    let clickLength = e.changedTouches[0].clientX - this.tracktoleft;
+    let click_index = Math.round( clickLength / ( (this.track_length / (this.config.max - this.config.min)) * Number(this.config.step))) * Number(this.config.step) + Number(this.config.min);
+    this.setValueFn(click_index)
+    if(this.props.showTip){
+      findDOMNode(this).children[1].setAttribute('data-attr',`${click_index}${this.config.unit}`);
+    }
+    if(this.props.onClickChange){
+      this.props.onClickChange(click_index)
+    }
+  }
+
   beforeSetValue(value){
     if(this.valueIndex <= this.config.min){
       this.valueIndex = Number(this.config.min);
@@ -117,7 +129,7 @@ class Slider extends React.Component {
   render(){
     return (
       <div className="rc_slider_wrap">
-          <div className="rc_slider_track"></div>
+          <div className="rc_slider_track" onTouchStart={this.onClickFn}></div>
           <div className={ClassNames('rc_slider_thumb',{'showTip':this.props.showTip})}
               style={this.state.move}
               onTouchStart={this.onTouchStartFn}

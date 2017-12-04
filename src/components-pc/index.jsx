@@ -1,5 +1,37 @@
 import React, { Component } from 'react'
-import Table from './table';
+import TableCp from './table';
+import { Table } from 'antd';
+import 'antd/dist/antd.css'
+
+const columns_ = [
+  { title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left' },
+  { title: 'Age', width: 100, dataIndex: 'age', key: 'age', fixed: 'left' },
+  { title: 'Column 1', dataIndex: 'address', key: '1', width: 150 },
+  { title: 'Column 2', dataIndex: 'address', key: '2', width: 150 },
+  { title: 'Column 3', dataIndex: 'address', key: '3', width: 150 },
+  { title: 'Column 4', dataIndex: 'address', key: '4', width: 150 },
+  { title: 'Column 5', dataIndex: 'address', key: '5', width: 150 },
+  { title: 'Column 6', dataIndex: 'address', key: '6', width: 150 },
+  { title: 'Column 7', dataIndex: 'address', key: '7', width: 150 },
+  { title: 'Column 8', dataIndex: 'address', key: '8' },
+  {
+    title: 'Action',
+    key: 'operation',
+    fixed: 'right',
+    width: 100,
+    render: () => <a href="#">action</a>,
+  },
+];
+
+const data = [];
+for (let i = 0; i < 100; i++) {
+  data.push({
+    key: i,
+    name: `Edrward ${i}`,
+    age: 32,
+    address: `London Park no. ${i}`,
+  });
+}
 
 class PCDemo extends Component {
   render () {
@@ -171,13 +203,61 @@ class PCDemo extends Component {
         Lock7:'data2',
         Lock8:'data2',
         Lock9:'data2'
+      },
+      {
+        key:'7',
+        machine_work_stream: 'down',
+        machine_time_action: '2017-12-01',
+        machine_work_status: 'success',
+        machine_work_sign: 'ok',
+        Switch:'data3',
+        WorkMode:'data2',
+        WindSpeed:'data2',
+        Power:'data2',
+        Lock:'data2',
+        WorkTime:'data2',
+        ChildLock:'data2',
+        Timing:'data2',
+        Power2:'data2',
+        Lock2:'data2',
+        Lock3:'data2',
+        Lock4:'data2',
+        Lock5:'data2',
+        Lock6:'data2',
+        Lock7:'data2',
+        Lock8:'data2',
+        Lock9:'data2'
+      },
+      {
+        key:'8',
+        machine_work_stream: 'up',
+        machine_time_action: '2017-12-01',
+        machine_work_status: 'success',
+        machine_work_sign: 'ok',
+        Switch:'data3',
+        WorkMode:'data2',
+        WindSpeed:'data2',
+        Power:'data2',
+        Lock:'data2',
+        WorkTime:'data2',
+        ChildLock:'data2',
+        Timing:'data2',
+        Power2:'data2',
+        Lock2:'data2',
+        Lock3:'data2',
+        Lock4:'data2',
+        Lock5:'data2',
+        Lock6:'data2',
+        Lock7:'data2',
+        Lock8:'data2',
+        Lock9:'data2'
       }
     ]
 
     return (
       <div className="common-display-area">
         <p>table 组件，固定头部</p>
-        <Table columns={columns} dataSource={dataSource}/>
+        <TableCp columns={columns} dataSource={dataSource}/>
       </div>
     )
   }

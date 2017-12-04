@@ -299,15 +299,15 @@ video {
         border: 1px solid #f7f7f7;
     }
 
-    table > tbody > tr:hover {
-        background: rgb(159, 199, 245);
+    table > tbody > tr:nth-child(2n)  {
+        background: rgb(215, 238, 247);
     }
 
     .rc_table_left_container {
         position: absolute;
         top: 0;
         left: 0;
-        
+        box-shadow: 1px 0 15px rgb(169, 214, 231);
         .rc_table_left_header_container {
             position: absolute;
         }
@@ -321,7 +321,7 @@ video {
         position: absolute;
         top: 0;
         right: 0;
-        
+        box-shadow: 0 1px 15px rgb(169, 214, 231);
         .rc_table_right_header_container {
             position: absolute;
         }

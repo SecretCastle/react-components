@@ -48,15 +48,7 @@ class PCDemo extends Component {
       {name:'WorkTime', dataIndex:'WorkTime'},
       {name:'ChildLock', dataIndex:'ChildLock'},
       {name:'Timing', dataIndex:'Timing'},
-      {name:'Power2', dataIndex:'Power2'},
-      {name:'Lock2', dataIndex:'Lock2'},
-      {name:'Lock3', dataIndex:'Lock3'},
-      {name:'Lock4', dataIndex:'Lock4'},
-      {name:'Lock5', dataIndex:'Lock5'},
-      {name:'Lock6', dataIndex:'Lock6'},
-      {name:'Lock7', dataIndex:'Lock7'},
-      {name:'Lock8', dataIndex:'Lock8'},
-      {name:'Lock9', dataIndex:'Lock9'},
+      {name:'Power2', dataIndex:'Power2'}
     ]
 
     const dataSource = [
@@ -66,23 +58,15 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data1',
+        Switch:'switch0',
         WorkMode:'data1',
         WindSpeed:'data1',
         Power:'data1',
         Lock:'data1',
         WorkTime:'data1',
-        ChildLock:'data1',
-        Timing:'data1',
-        Power2:'data1',
-        Lock2:'data1',
-        Lock3:'data1',
-        Lock4:'data1',
-        Lock5:'data1',
-        Lock6:'data1',
-        Lock7:'data1',
-        Lock8:'data1',
-        Lock9:'data1'
+        ChildLock:'data2',
+        Timing:'data2',
+        Power2:'data2'
       },
       {
         key:'2',
@@ -90,7 +74,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch1',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -98,15 +82,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'3',
@@ -114,7 +90,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -122,15 +98,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'4',
@@ -138,7 +106,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -146,15 +114,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'5',
@@ -162,7 +122,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -170,15 +130,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'6',
@@ -186,7 +138,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -194,15 +146,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'7',
@@ -210,7 +154,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -218,15 +162,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       },
       {
         key:'8',
@@ -234,7 +170,7 @@ class PCDemo extends Component {
         machine_time_action: '2017-12-01',
         machine_work_status: 'success',
         machine_work_sign: 'ok',
-        Switch:'data3',
+        Switch:'switch5',
         WorkMode:'data2',
         WindSpeed:'data2',
         Power:'data2',
@@ -242,15 +178,7 @@ class PCDemo extends Component {
         WorkTime:'data2',
         ChildLock:'data2',
         Timing:'data2',
-        Power2:'data2',
-        Lock2:'data2',
-        Lock3:'data2',
-        Lock4:'data2',
-        Lock5:'data2',
-        Lock6:'data2',
-        Lock7:'data2',
-        Lock8:'data2',
-        Lock9:'data2'
+        Power2:'data2'
       }
     ]
 

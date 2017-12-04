@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import _ from 'underscore';
-
+import ClassNames from 'classnames';
 //工厂组件
 class Factory extends Component {
    dataFactory(columns, type){
@@ -38,17 +38,39 @@ class FactoryData extends Component {
       let innerRes = []
       let item = dataSource[index];
       let keys = _.keys(item);
+      let localSave = [];
+      // 先比较是否存在不同的值 
+      if(index >= 1 && type==='center'){
+        for(let indexInner = 0, innerLen = keys.length; indexInner < innerLen; indexInner++){
+          let key = keys[indexInner];
+          if(key !== 'key' && key !== 'flag'){
+            if(dataSource[index - 1][key] !== dataSource[index][key]){
+              localSave.push(indexInner)
+            }
+          }
+        }
+      }
+     
+      // render table columns
       for(let indexInner = 0, innerLen = keys.length; indexInner < innerLen; indexInner++){
         let key = keys[indexInner];
-        if(key !== 'key') innerRes.push(<td key={key}>{item[key]}</td>)
+        //render background which was different
+        if(key !== 'key' && key !== 'flag') {  
+          innerRes.push(<td className={ClassNames({'diff':localSave.includes(indexInner)})} key={key}>{item[key]}</td>);     
+        }     
       }
-      result.push(<tr key={type+item.key}>{innerRes}</tr>)
+
+      if(item.flag){
+        result.push(<tr className="downStream" key={type+item.key}>{innerRes}</tr>)
+      }else{
+        result.push(<tr className="upstream" key={type+item.key}>{innerRes}</tr>)
+      }
     }
     return <tbody>{result}</tbody>;
   }
   render () {
     const {dataSource, type} = this.props;
-    const result = this.dataFactory(dataSource);
+    const result = this.dataFactory(dataSource, type);
     return  result;
   }
 }
@@ -192,6 +214,7 @@ class Table extends Component {
       // 比较
       for(let i = 0 ; i < keyLen; i++){
         let key = keys[i];
+
         // 判断在哪个堆中
         if(leftcolkey.includes(key)){
           leftRes[key] = item[key]
@@ -201,6 +224,11 @@ class Table extends Component {
         }
         if(centercolkey.includes(key)){
           centerRes[key] = item[key]          
+        }
+        if(item[key] === 'down'){
+          leftRes['flag'] = true
+          rightRes['flag'] = true
+          centerRes['flag'] = true
         }
       }
       centerRes['key'] = item.key;

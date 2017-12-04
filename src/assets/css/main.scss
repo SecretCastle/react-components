@@ -303,6 +303,14 @@ video {
         background: rgb(215, 238, 247);
     }
 
+    table > tbody > tr > td.diff {
+        background: rgb(108, 243, 164);
+    }
+
+    table > tbody > tr.downStream {
+        background: rgb(108, 243, 164);
+    }
+
     .rc_table_left_container {
         position: absolute;
         top: 0;

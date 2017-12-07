@@ -9,6 +9,7 @@ module.exports = merge(basejs, {
         
     ],
     devServer: {
+        stats:'errors-only',
         //开发模式下的代理
         // proxy: {
         //     '/categories': {

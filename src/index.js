@@ -14,11 +14,12 @@ const App = () => (
   <Router>
     <div>
       <ul className="common-style">
-        <li><Link to="/">PC</Link></li>
+        <li><Link to="/pc">PC</Link></li>
         <li><Link to="/mobile">Mobile</Link></li>
       </ul>
       <hr />
       <Route exact path='/' component={PCDemo}/>
+      <Route path='/pc' component={PCDemo}/>
       <Route path="/mobile" component={Demo}/>
     </div>
   </Router>

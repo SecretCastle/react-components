@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.jsx',
+    entry: './src/index.js',
     externals: {
         jquery: 'window.$'
     },
@@ -14,13 +14,9 @@ module.exports = {
         extensions: ['.js', '.jsx', '.css', '.scss']
     },
     module: {
-        rules: [{
-                test: /\.jsx$/,
-                loaders: ["babel-loader", "eslint-loader"],
-                exclude: /node_modules/
-            },
+        rules: [
             {
-                test: /\.jsx$/,
+                test: /\.js$/,
                 loaders: ["babel-loader", "eslint-loader"],
                 exclude: /node_modules/
             },

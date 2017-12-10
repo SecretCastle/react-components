@@ -168,14 +168,17 @@ class GraphComp extends Component {
     return (
       <div className="common-display-area">
         <p>图形组件</p>
-        <Graph.FogPie 
+        <Graph 
           id={"graph-container"} 
-          type={"fog-pie"}
+          type={"bar"}
           width={500}
-          height={400}
+          height={300}
           config={
             {
-              color:['#f00', '#000']
+              title: {
+                text: '我是饼状图'
+              },
+              color: ['#f00','#000','#fff','#eee']
             }
           }
         />

@@ -9,9 +9,10 @@ class FogBar extends Component {
   }
 
   createGraph(){
-    const {id, config} = this.props;
-    this.echartDom = document.getElementById(id);
-    const options = CreateTool.createOption(config);
+    const {id, data, type, config } = this.props;
+    this.echartDom = echarts.init(document.getElementById(id));
+    const options = CreateTool.createOption(data, type, config);
+    this.echartDom.setOption(options)
   }
 
   render () {

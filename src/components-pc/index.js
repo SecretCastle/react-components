@@ -165,6 +165,11 @@ class PCDemo extends Component {
 
 class GraphComp extends Component {
   render () {
+    const data = {
+      x: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      y:['100','200','300'],
+      data: [10, 52, 200, 334, 390, 330, 220]
+    }
     return (
       <div className="common-display-area">
         <p>图形组件</p>
@@ -173,14 +178,7 @@ class GraphComp extends Component {
           type={"bar"}
           width={500}
           height={300}
-          config={
-            {
-              title: {
-                text: '我是饼状图'
-              },
-              color: ['#f00','#000','#fff','#eee']
-            }
-          }
+          data={data}
         />
       </div>
     )

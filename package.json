@@ -9,7 +9,7 @@
     "start": "node tpIn.js",
     "test": "node ./build/node-monitor.js"
   },
-  "author": "",
+  "author": "SecretCastle <chenfangzhong@hotmail.com>",
   "license": "ISC",
   "devDependencies": {
     "antd": "^2.13.11",
@@ -40,5 +40,6 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-merge": "^4.1.0"
-  }
+  },
+  "repository": "git@github.com:SecretCastle/react-components.git"
 }

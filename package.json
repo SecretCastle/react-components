@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm test & webpack-dev-server --env=dev --colors --hot",
+    "dev": "webpack-dev-server --env=dev --colors --hot",
     "build": "webpack --env=prod --progress --profile --colors",
     "start": "node tpIn.js",
     "test": "node ./build/node-monitor.js"

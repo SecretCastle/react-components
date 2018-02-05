@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TableCp from './table';
 import Graph from './graph';
 import Modal from './modal';
+import Test from './test';
 import { Route, Link } from 'react-router-dom';
 import 'antd/dist/antd.css'
 
@@ -195,10 +196,12 @@ class PC extends Component {
           <li><Link to="/pc">table</Link></li>
           <li><Link to="/pc/graph">graph</Link></li>
           <li><Link to="/pc/modal">modal</Link></li>
+          <li><Link to="/pc/test">Test</Link></li>
         </ul>
         <Route exact path={`${match.url}`} component={PCDemo}/>
         <Route path={`${match.url}/graph`} component={GraphComp}/>
-        <Route path={`${match.url}/modal`} component={Modal}/>
+        <Route path={`${match.url}/modal`} component={Modal} />
+        <Route path={`${match.url}/test`} component={Test}/>
       </div>
     )
   }
